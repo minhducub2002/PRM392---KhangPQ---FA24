@@ -3,6 +3,7 @@ package com.example.instagramlogin;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -13,10 +14,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button loginButton;
+    private Button loginButton;
+    private EditText account;
+    private EditText password;
 
     private void bindingView() {
         loginButton = findViewById(R.id.LoginButton);
+        account = findViewById(R.id.account);
+        password = findViewById(R.id.password);
     }
 
     private void bindingAction() {
@@ -24,7 +29,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onBtnChangeClick(View view) {
-        Toast toast = Toast.makeText(this, "Login fail!", Toast.LENGTH_SHORT);
+        String acc = account.getText().toString();
+        String pass = password.getText().toString();
+
+        Toast toast;
+        if (acc.equals("admin") && pass.equals("123456")) {
+            toast = Toast.makeText(this, "Login success!", Toast.LENGTH_SHORT);
+        } else {
+            toast = Toast.makeText(this, "Login fail!", Toast.LENGTH_SHORT);
+        }
         toast.show();
     }
 
