@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LoginAccount" >
+        <item name="android:backgroundTint">@color/colorAccentDark</item>
+        <item name="android:textColor">@color/colorAccentDark</item>
+        <item name="android:textColorHint">@color/colorAccentDark</item>
+        <item name="android:hint">Email or Phone</item>
+    </style>
+
+    <style name="LoginPassword" parent="LoginAccount">
+        <item name="android:hint">Password</item>
+    </style>
+
+    <style name="LoginButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/colorPrimaryLight</item>
+        <item name="android:textColor">@color/colorAccentDark</item>
+        <item name="android:text">LOG IN</item>
+    </style>
+
+    <style name="LinkButton">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="LinkSignUp" parent="LinkButton">
+        <item name="android:text">Sign Up for Facebook</item>
+    </style>
+
+    <style name="LinkForgotPassword" parent="LinkButton">
+        <item name="android:text">Forgot Password?</item>
+    </style>
+
+    <style name="HelpButton">
+
+    </style>
+
+</resources>

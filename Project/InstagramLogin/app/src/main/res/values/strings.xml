@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Instagram Login</string>
+    <string name="get_help_signing_in">Get help signing in.</string>
+    <string name="sign_up">Sign up.</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+</resources>
