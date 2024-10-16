@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void onHomeActivityCallBack(ActivityResult activityResult) {
         if(activityResult.getResultCode() == Constants.RESULT_CODE_OK){
-
             finish();
         }
     }
