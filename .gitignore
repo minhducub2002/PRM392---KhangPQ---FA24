@@ -1,1 +1,66 @@
+# Build thư mục
+build/
+.gradle/
+**/build/
+
+# IntelliJ / Android Studio thư mục
+.idea/
+*.iml
+*.hprof
+
+# Thư mục cục bộ
+local.properties
+
+# Thư mục hệ thống
+.DS_Store
+Thumbs.db
+
+# Gradle files
+.gradle/
+**/gradle-wrapper.jar
+**/gradle-wrapper.properties
+
+# Log files
+*.log
+
+# APK và các file đóng gói
+*.apk
+*.ap_
+
+# Thư mục tạm thời khác
+*.swp
+*.swo
+
+# File Proguard
+proguard/
+proguard_logs/
+proguard_output/
+
+# Keystore files (khóa bảo mật Android, chỉ nên lưu trữ cục bộ)
+*.jks
+*.keystore
+
+# Các file nhạy cảm khác
+*.key
+*.pem
+*.crt
+
+# Các tệp lớp (class) được biên dịch
+*.class
+
+# Binary và object files
+*.so
+*.o
+*.obj
+*.exe
+*.dll
+*.pdb
+
+# Thư mục/các file phân phối
+dist/
+*.jar
+*.war
+*.ear
+
+# Thư mục thông báo
 Notification/
