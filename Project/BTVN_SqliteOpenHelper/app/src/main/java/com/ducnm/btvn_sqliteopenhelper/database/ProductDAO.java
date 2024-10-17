@@ -1,5 +1,7 @@
 package com.ducnm.btvn_sqliteopenhelper.database;
 
+import android.database.Cursor;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -31,4 +33,9 @@ public interface ProductDAO {
     @Query("DELETE FROM product")
     void deleteAllProduct();
 
+    @Query("SELECT * FROM product")
+    Cursor getAllProductsCursor();
+
+    @Query("SELECT * FROM product WHERE id = :id")
+    Cursor getProductByIdCursor(long id);
 }

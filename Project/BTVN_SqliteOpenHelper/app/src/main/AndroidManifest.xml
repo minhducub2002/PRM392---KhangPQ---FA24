@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BTVN_SqliteOpenHelper"
         tools:targetApi="31">
+        <provider
+            android:name=".contentprovider.MyContentProvider"
+            android:authorities="com.ducnm.btvn_sqliteopenhelper"
+            android:enabled="true"
+            android:exported="true"></provider>
+
         <activity
             android:name=".UpdateProductActivity"
             android:exported="false" />

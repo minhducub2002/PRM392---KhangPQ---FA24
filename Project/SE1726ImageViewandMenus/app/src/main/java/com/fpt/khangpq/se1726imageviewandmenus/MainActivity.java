@@ -1,5 +1,7 @@
 package com.fpt.khangpq.se1726imageviewandmenus;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -18,6 +20,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,11 +48,39 @@ public class MainActivity extends AppCompatActivity {
 
     private void onBtnLoadClick(View view) {
         String url = edtUrl.getText().toString();
-        Glide.with(this)
-                .load(url)
-                .error(R.drawable.img_2)
-                .placeholder(R.drawable.img_3)
-                .into(imgView);
+        imgView.setImageResource(R.drawable.img_3);
+        new Thread(() -> {
+            Bitmap img = urlToBitmap(url);
+            runOnUiThread(() -> {
+                if (img == null) {
+                    imgView.setImageResource(R.drawable.img_2);
+                } else {
+                    imgView.setImageBitmap(img);
+                }
+            });
+        }).start();
+
+
+//        Glide.with(this)
+//                .load(url)
+//                .error(R.drawable.img_2)
+//                .placeholder(R.drawable.img_3)
+//                .into(imgView);
+    }
+
+    private Bitmap urlToBitmap(String src) {
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return myBitmap;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     private void onBtnChangeClick(View view) {
