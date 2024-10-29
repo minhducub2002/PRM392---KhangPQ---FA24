@@ -1,4 +1,8 @@
-# Build thư mục
+# Gradle files
+.gradle/
+local.properties
+
+# Build files
 build/
 .gradle/
 **/build/
@@ -8,16 +12,10 @@ build/
 *.iml
 *.hprof
 
-# Thư mục cục bộ
-local.properties
-
 # Thư mục hệ thống
 .DS_Store
 Thumbs.db
 
-# Gradle files
-.gradle/
-**/gradle-wrapper.jar
 
 # Log files
 *.log
