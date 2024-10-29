@@ -18,7 +18,6 @@ Thumbs.db
 # Gradle files
 .gradle/
 **/gradle-wrapper.jar
-**/gradle-wrapper.properties
 
 # Log files
 *.log
