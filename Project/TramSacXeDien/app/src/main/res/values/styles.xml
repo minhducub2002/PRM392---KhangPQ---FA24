@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/input_background</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="PasswordInputLayout" parent="TextInputLayout">
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconTint">@color/input_text</item>
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:textColorHint">@color/input_text</item>
+    </style>
+
+    <style name="UsernameInputEditText" parent="TextInputEditText">
+        <item name="android:hint">Nhập số điện thoại của bạn</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="PasswordInputEditText" parent="TextInputEditText">
+        <item name="android:hint">Mật khẩu gồm ít nhất 6 kí tự</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="RePasswordInputEditText" parent="PasswordInputEditText">
+        <item name="android:hint">Nhập lại mật khẩu của bạn</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="ButtonLogin" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:text">Log in</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ForgotLoginTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">Forgot your login details?</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">#15B392</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+</resources>
