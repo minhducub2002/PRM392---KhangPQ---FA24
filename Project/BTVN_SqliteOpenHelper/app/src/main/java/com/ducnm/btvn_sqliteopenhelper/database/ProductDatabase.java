@@ -16,7 +16,8 @@ public abstract class ProductDatabase extends RoomDatabase {
 
     public static synchronized ProductDatabase getInstance(Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(), ProductDatabase.class, DATABASE_NAME)
+            instance = Room.databaseBuilder(context.getApplicationContext(),
+                            ProductDatabase.class, DATABASE_NAME)
                     .allowMainThreadQueries()
                     .build();
         }
