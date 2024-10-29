@@ -62,5 +62,17 @@ dist/
 *.war
 *.ear
 
+# Các file nén
+*.rar
+*.zip
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+
 # Thư mục thông báo
 Notification/
+
+# Server socket
+socketio-chat-server/
