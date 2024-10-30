@@ -22,7 +22,7 @@ public interface AccountDao {
     List<Account> getAllAccounts();
 
     @Query("SELECT * FROM account WHERE username = :username")
-    List<Account> getAccountByUsername(String username);
+    List<Account> checkAccount(String username);
 
     @Update
     void updateAccount(Account account);

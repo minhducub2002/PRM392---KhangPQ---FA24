@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeItem"
+        android:icon="@drawable/baseline_home_filled_24"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/mychargeItem"
+        android:icon="@drawable/baseline_ev_station_24"
+        android:title="Mycharge" />
+    <item
+        android:id="@+id/searchItem"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Trạm sạc" />
+    <item
+        android:id="@+id/paymentItem"
+        android:icon="@drawable/baseline_wallet_24"
+        android:title="Thanh toán" />
+    <item
+        android:id="@+id/settingItem"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Cài đặt" />
+</menu>

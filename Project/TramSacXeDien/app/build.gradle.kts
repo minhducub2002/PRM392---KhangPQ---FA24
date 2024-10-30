@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_EXPRESSION")
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -25,6 +27,11 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -42,6 +49,6 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     // import thu vien room database
-    implementation (libs.room.runtime)
-    annotationProcessor (libs.room.compiler)
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
 }

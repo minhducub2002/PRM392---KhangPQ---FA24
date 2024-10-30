@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TramSacXeDien</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello home fragment</string>
 </resources>

@@ -14,7 +14,7 @@ public class Account implements Serializable {
     private String password;
     private String firstName;
     private String lastName;
-    private String phone;
+    private int phone;
     private String email;
     private String address;
     private String carBrand;
@@ -23,8 +23,14 @@ public class Account implements Serializable {
         // Constructor mặc định
     }
 
+    // Constructor cho 
+    public Account(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public Account(int id, String username, String password, String firstName, String lastName,
-                   String phone, String email, String address, String carBrand) {
+                   int phone, String email, String address, String carBrand) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -78,11 +84,11 @@ public class Account implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 

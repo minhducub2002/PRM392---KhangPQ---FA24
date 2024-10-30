@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".activity.LoginActivity">
 
     <LinearLayout
         android:id="@+id/account_layout"
@@ -74,7 +74,7 @@
             android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/rePassword"
+                android:id="@+id/rePasswordSignUp"
                 style="@style/RePasswordInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
