@@ -11,7 +11,7 @@ import com.ducnm.tramsacxedien.object.Account;
 @Database(entities = {Account.class}, version = 1)
 public abstract class AccountDatabase extends RoomDatabase {
 
-    private static final String DATABASE_NAME = "TramSacXeDien.db";
+    private static final String DATABASE_NAME = "TramSacXeDien";
     private static AccountDatabase instance;
 
     public static synchronized AccountDatabase getInstance(Context context) {

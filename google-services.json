@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399343332954",
+    "project_id": "vietev-c87e4",
+    "storage_bucket": "vietev-c87e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399343332954:android:f50c7a058135e89f977263",
+        "android_client_info": {
+          "package_name": "com.ducnm.tramsacxedien"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjDo5PbXjOysRCZ2qMez5wsrYiL-zvCZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

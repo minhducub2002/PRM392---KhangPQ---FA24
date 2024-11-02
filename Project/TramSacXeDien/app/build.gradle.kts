@@ -2,9 +2,18 @@
 
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
+    signingConfigs {
+        create("my_config") {
+            storeFile = file("D:\\FPT\\Term_9\\PRM392\\KeyStore.jks")
+            storePassword = "03082002"
+            keyAlias = "ducnm"
+            keyPassword = "03082002"
+        }
+    }
     namespace = "com.ducnm.tramsacxedien"
     compileSdk = 34
 
@@ -25,6 +34,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("my_config")
         }
     }
 
@@ -51,4 +61,8 @@ dependencies {
     // import thu vien room database
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.auth)
 }

@@ -15,6 +15,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -116,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private boolean isAccountExist(Account account) {
+    private boolean isAccountExist(@NonNull Account account) {
         List<Account> accountList = AccountDatabase.getInstance(this).accountDao().checkAccount(account.getUsername());
         if (accountList == null && accountList.isEmpty()) {
             return false;
