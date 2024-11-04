@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF5EF">
+
+    <!-- Phần đầu với lời chào và biểu tượng thông báo -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/primaryColor">
+
+        <!-- Text Xin Chào -->
+        <TextView
+            android:id="@+id/greetingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Xin Chào!"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Biểu tượng thông báo"
+            android:src="@drawable/notification"
+            app:tint="#FFFF" />
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="1dp"
+            android:layout_toStartOf="@id/notificationIcon"
+            android:contentDescription="Thông tin người dùng"
+            android:src="@drawable/img_1"
+            app:tint="#FFFF" />
+
+    </RelativeLayout>
+
+    <!-- Thanh tìm kiếm -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tìm kiếm"
+        android:padding="10dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button_background"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawablePadding="8dp"/>
+
+    <!-- Thẻ trạm sạc -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/primaryColor"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/chargingStationImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/img_7"
+            android:scaleType="centerCrop"
+            android:contentDescription="Hình ảnh trạm sạc" />
+
+        <TextView
+            android:id="@+id/chargingStationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trạm Sạc VinFast"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/chargingStationDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.34 km"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Phần các trạm sạc đề xuất -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Các trạm sạc đề xuất"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/stationImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_8"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Hình ảnh trạm sạc" />
+</LinearLayout>
